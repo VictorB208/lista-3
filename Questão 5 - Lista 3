@@ -1,0 +1,15 @@
+#!/bin/bash
+
+echo "Crie uma senha com ao menos 5 caracteres, ao menos uma letra maiúscula e ao menos um número."
+
+read -s senha
+
+echo "$senha" | grep -qP '^.*(?=.{8,})(?=.*[A-Z])(?=.*\d)(?=.*\W)(?=.*[a-z]).*$';
+
+a=$?
+
+if [ $a = '0' ]; then
+	      echo -e "Senha forte"
+else
+	      echo -e "Senha fraca"
+fi
