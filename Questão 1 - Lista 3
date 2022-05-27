@@ -1,0 +1,3 @@
+#/bin/bash
+
+cat a.txt | tr 1-9 Z
